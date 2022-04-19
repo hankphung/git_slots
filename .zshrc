@@ -6,7 +6,8 @@ git_root(){
 branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/\1/p'
 }
-# adding a clipboard folder with 10 empty slots
+
+# adding a clipboard folder with 5 empty slots
 setup_clipboard(){
   groot=`git_root`
   mkdir -p "$groot"/.git/clipboard

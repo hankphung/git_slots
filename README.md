@@ -19,11 +19,6 @@ _>my_repo: b
 3
 4
 5
-6
-7
-8
-9
-10
 ```
 To save the current working branch into the slot 1:
 ```sh
