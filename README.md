@@ -53,11 +53,22 @@ Switched to branch branch-that-i-used-to-know
 ```
 To save a random value into a slot:
 ```sh
-_>my_repo: put 2 'some important_string!'
+_>my_repo: put 2 'some not_important_string!'
 got it!
 _>my_repo: b
 1 branch-that-i-used-to-know
-2 some important_string!
+2 some not_important_string!
 3
 ...
+```
+The value that you saved in a slot can be used later in your commands
+```sh
+_>my_repo: b
+1 branch-that-i-used-to-know
+2 some not_important_string!
+3
+...
+_>my_repo: myval=`read-clipboard 1`
+_>my_repo: echo $myval
+some not_important_string!
 ```
